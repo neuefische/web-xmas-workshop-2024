@@ -107,6 +107,7 @@ Wenn du versuchst, etwas in das zweite `article` Element zu schreiben wirst du f
 <main class="card flipped">
   ...
   <article class='back'>
+    <!-- Back side content -->
     some Text for testing...
   </article>
 </main>
