@@ -25,7 +25,7 @@ Den JS Reiter können wir vorerst ignorieren, stattdessen fokussieren wir uns au
 Du siehst hier die Struktur von dem Inhalt der Website. Sie wird mit sogenannten `Elementen` , die man ineinander verschachteln kann, beschrieben. Z.B. besteht die Grußkarte aus einem `main` Element, in dem sich 2 `article` Elemente befinden. Das sieht man daran, dass sich die `article` Elemente zwischen dem öffnenden `<main>` Tag und dem schließenden `</main>` Tag befinden. Alles zwischen diesen beiden Tags befindet sich "in dem `main` Element". 
 Genau befindet sich das `canvas` Element "in dem ersten  `article` Element", da es zwischen dessen öffnenden und schließendem Tag platziert ist. 
 
-Die `class` Attribute, die einige Elemente bekommen, werden zum Stylen von den Elementen gedacht verwendet. Das Aussehen wird mit CSS Klassen definiert. Auch wenn der CSS Reiter noch leer ist, wir haben ein wenig CSS schon vorbereitet und eingebunden, damit du nicht bei Null starten musst. So haben wir unter anderem die Größe der Karte, abgerundeten Ecken und den leichten Schlagschatten definiert, die du an der Karte vielleicht schon bemerkt hast.
+Die `class` Attribute, die einige Elemente bekommen, werden zum Stylen von den Elementen verwendet. Das Aussehen wird mit CSS Klassen definiert. Auch wenn der CSS Reiter noch leer ist, wir haben ein wenig CSS schon vorbereitet und eingebunden, damit du nicht bei Null starten musst. So haben wir unter anderem die Größe der Karte, abgerundeten Ecken und den leichten Schlagschatten definiert, die du an der Karte vielleicht schon bemerkt hast.
 
 ### Das erste eigene HTML Element
 Lass uns nun das erste HTML Element du der Vorderseite der Karte hinzufügen, eine `h1` Überschrift:
