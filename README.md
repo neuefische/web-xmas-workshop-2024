@@ -2,7 +2,9 @@
 
 In diesem Workshop werden wir gemeinsam eine interaktive Grußkarte für die Weihnachtszeit bauen. Du kannst sie später an Freunde und Verwandte senden und zeigen was du alles gelernt hast. ✨
 
-Beginn mit unserem [Template](https://codepen.io/neuefische/pen/BaXMKjv). Bevor wir loslegen können, müssen wir diesen Starter Code verstehen.
+Beginn mit unserem [Template](https://codepen.io/neuefische/pen/BaXMKjv). Kopiere dir diese Vorlage indem du auf `fork` unten rechts in der Aktionsleiste drückst. Du wirst aufgefordert, dich einzuloggen. Wähle die Option "Bei CodePen registrieren". Du solltest im Anschluss einen Account sowie eine eigene Kopie der Vorlage haben.
+
+Bevor wir loslegen können, müssen wir allerdings diese Vorlage verstehen.
 
 ### Das Template Verstehen
 
