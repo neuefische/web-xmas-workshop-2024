@@ -2,12 +2,13 @@
 
 In diesem Workshop werden wir gemeinsam eine interaktive Grußkarte für die Weihnachtszeit bauen. Du kannst sie später an Freunde und Verwandte senden und zeigen was du alles gelernt hast. ✨
 
-Beginn mit unserem [Template](https://codepen.io/neuefische/pen/BaXMKjv). Bevor wir loslegen können, müssen wir diesen Starter Code verstehen.
+Beginn mit unserem [Template](https://codepen.io/neuefische/pen/BaXMKjv). Kopiere dir diese Vorlage indem du auf `fork` unten rechts in der Aktionsleiste drückst. Du wirst aufgefordert, dich einzuloggen. Wähle die Option "Bei CodePen registrieren". Du solltest im Anschluss einen Account sowie eine eigene Kopie der Vorlage haben.
+
+Bevor wir loslegen können, müssen wir allerdings diese Vorlage verstehen.
 
 ### Das Template Verstehen
 
-Du siehst vor dir das Template für die Weihnachtskarte. Es gibt drei Reiter - HTML, CSS und JavaScript (JS) - sowie die Darstellung der Website mit einer leeren weißen Karte.
-Den JS Reiter können wir vorerst ignorieren, stattdessen fokussieren wir uns auf das HTML:
+Du siehst vor dir das Template für die Weihnachtskarte. Es gibt drei Reiter - HTML, CSS und JavaScript (JS) - sowie die Darstellung der Website mit einer leeren weißen Karte. Den JS Reiter können wir vorerst ignorieren, stattdessen fokussieren wir uns auf das HTML:
 
 > HTML
 
@@ -23,9 +24,10 @@ Den JS Reiter können wir vorerst ignorieren, stattdessen fokussieren wir uns au
 </main>
 ```
 
-Du siehst hier die Struktur von dem Inhalt der Website. Sie wird mit sogenannten `Elementen` , die man ineinander verschachteln kann, beschrieben. Z.B. besteht die Grußkarte aus einem `main` Element, in dem sich 2 `article` Elemente befinden. Das sieht man daran, dass sich die `article` Elemente zwischen dem öffnenden `<main>` Tag und dem schließenden `</main>` Tag befinden. Alles zwischen diesen beiden Tags befindet sich "in dem `main` Element".
+Du siehst hier die Struktur von dem Inhalt der Website. Sie wird mit sogenannten `Elementen` , die man ineinander verschachteln kann, beschrieben. Z.B. besteht die Grußkarte aus einem `main` Element, in dem sich 2 `article` Elemente befinden. Das sieht man daran, dass sich die `article` Elemente zwischen dem öffnenden `<main>` Tag und dem schließenden `</main>` Tag befinden. Alles zwischen diesen beiden Tags befindet sich "in dem `main` Element". (Siehe [Anhang - HTML](#anhang))
 
-Die `class` Attribute werden zum Stylen von den Elementen verwendet. Das Aussehen wird mit CSS Klassen wie z.B. `card` order `front` definiert. Auch wenn der CSS Reiter noch leer ist, wir haben ein wenig CSS schon vorbereitet und eingebunden, damit du nicht bei Null starten musst. So haben wir unter anderem die Größe der Karte, abgerundeten Ecken und den leichten Schlagschatten definiert, die du an der Karte vielleicht schon bemerkt hast.
+Die `class` Attribute werden zum Stylen von den Elementen verwendet. Das Aussehen wird mit CSS Klassen wie z.B. `card` order `front` definiert. (Siehe [Anhang - CSS](#anhang))
+Wir haben ein wenig CSS schon vorbereitet und eingebunden, damit du nicht bei Null starten musst. So haben wir unter anderem die Größe der Karte, abgerundeten Ecken und den leichten Schlagschatten definiert, die du an der Karte vielleicht schon bemerkt hast.
 
 ### Das erste eigene HTML Element
 
@@ -203,6 +205,84 @@ In mehreren `h2`, `p` und `span` Elementen können wir unseren Text strukturiere
 - `font-style: italic`: Es wird kursive Schrift für dieses Element verwendet.
 
 Nun haben wir sowohl die Vorder - als auch die Rückseite unserer Karte wunderschön gestaltet. Jetzt muss der Nutzer nur noch die Karte selbst drehen können.
+
+### Die Karte mittels JS drehen
+
+Zuerst nehmen wir die Klasse `flipped` von unserer Karte, damit wir wieder die Vorderseite sehen können:
+
+> HTML
+
+```html
+<main class="card">...</main>
+```
+
+Damit der Nutzer den Inhalt einer Website verändern kann, brauchen wir JavaScript. (Siehe [Anhang - JS](#anhang)) Das Ziel ist, dass die Karte gewendet wird, wenn der Nutzer auf diese klickt. In dem JS Reiter befindet sich schon folgender code:
+
+> JS
+
+```js
+const card = document.querySelector(".card");
+
+function handleCardClick() {
+  console.log("card was clicked.");
+  // -->
+}
+
+card.addEventListener("click", handleCardClick);
+```
+
+- `const card = document.querySelector(".card")` : Es wird das Element mit der Klasse `card` in dem HTML Dokument gefunden und in einer Variable `card` gespeichert. Diese Variable kann man später weiterverwenden.
+- `function handleCardClick() { ... }`: Eine Funktion namens `handleCardClick`. Funktionen sind Blöcke von Code, die immer wieder ausgeführt werden können, indem man die Funktion "aufruft".
+- `console.log("card was clicked.")`: Ein Befehl um den text "card was clicked." in der Console des Browsers darzustellen. Diese Zeile Code wird ausgeführt, wenn `handleCardClick` aufgerufen wird.
+- `card.addEventListener("click", handleCardClick)`: Mit dieser Zeile Code sagen wir dem Browser, dass jedes Mal die Funktion `handleCardClick` aufgerufen werden soll, wenn der Nutzer auf das Element `card` klickt. (Also das `main` Element mit der Klasse `card`, welches wir im HTML Reiter sehen können)
+
+Puh, ganz schön kompliziert. Keine Sorge, wir müssen nicht mehr viel verändern, damit die Karte gedreht werden kann.
+
+Wenn du die Console öffnest (mit dem Schalter "Console" unten links) und auf die Karte klickst, solltest der Text "card was clicked." erscheinen. Damit sehen wir, dass die Funktion `handleCardClick` ausgeführt wurde. Jetzt müssen wir nur noch den Code schreiben, der die Karte umdrehen lässt:
+
+> JS
+
+```js
+function handleCardClick() {
+  card.classList.add("flipped");
+}
+```
+
+- `card.classList.add("flipped")`: Wir fügen der Karte die Klasse `flipped` hinzu, also genau das, was wir schon manuell in dem HTML Reiter vorher gemacht haben.
+
+Wenn wir jetzt auf die Karte klicken dreht sie sich wie von Zauberhand um. Wahrhaft magisch!
+
+Es fehlt nur noch ein kleines Detail: Wenn wir versuchen, die Karte ein zweites Mal zu wenden, will es uns nicht gelingen. Was, wenn man drüber nachdenkt, logisch ist: Wir können die Klasse `flipped` im Moment nur hinzufügen, aber nicht wegnehmen. Dafür müssen wir ein kleines Detail ändern:
+
+> JS
+
+```js
+function handleCardClick() {
+  card.classList.toggle("flipped");
+}
+```
+
+- `classList.toggle`: Anstatt die Klasse hinzuzufügen, "togglen" oder schalten wir die Klasse um. Wenn sie vorhanden ist, wird sie entfernt; wenn sie fehlt, wird sie hinzugefügt.
+
+Et Voila! Unsere Karte lässt sich nun nach Belieben wenden.
+
+### Ein wenig weihnachtlicher Zauber
+
+Zu guter letzt haben wir eine kleines Geschenk für euch vorbereitet, welches eurer Weihnachtskarte einen Hauch Weihnachtszauber verleiht. Fügt folgende Zeile dem CSS Hinzu:
+
+> JS
+
+```js
+addChristmasMagic(30, "white");
+```
+
+Ihr könnt unterschiedlice Zahlen und Farben anstelle von `30` und `"white"` wählen und sehen was passiert. ✨
+
+### Abschluss
+
+Wir hoffen euch hat unser kleiner Workshop gefallen und dass ihr Lust auf Mehr bekommen habt! In unseren [Bootcamps](https://www.neuefische.de/) könnt ihr tief in das Thema Entwicklung eintauchen und eure Karriere als Web Entwickler\*in starten.
+
+Wir wünschen weiterhin eine Gute Zeit und natürlich ein Frohes Fest! ❄️🎁
 
 ---
 
