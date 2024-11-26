@@ -12,7 +12,6 @@ Den JS Reiter können wir vorerst ignorieren, stattdessen fokussieren wir uns au
 ```html
 <main class="card">
   <article class="front">
-    <canvas class='canvas'></canvas>
     <!-- Front side content -->
   </article>
 
@@ -23,16 +22,14 @@ Den JS Reiter können wir vorerst ignorieren, stattdessen fokussieren wir uns au
 ```
 
 Du siehst hier die Struktur von dem Inhalt der Website. Sie wird mit sogenannten `Elementen` , die man ineinander verschachteln kann, beschrieben. Z.B. besteht die Grußkarte aus einem `main` Element, in dem sich 2 `article` Elemente befinden. Das sieht man daran, dass sich die `article` Elemente zwischen dem öffnenden `<main>` Tag und dem schließenden `</main>` Tag befinden. Alles zwischen diesen beiden Tags befindet sich "in dem `main` Element". 
-Genau befindet sich das `canvas` Element "in dem ersten  `article` Element", da es zwischen dessen öffnenden und schließendem Tag platziert ist. 
 
-Die `class` Attribute, die einige Elemente bekommen, werden zum Stylen von den Elementen verwendet. Das Aussehen wird mit CSS Klassen definiert. Auch wenn der CSS Reiter noch leer ist, wir haben ein wenig CSS schon vorbereitet und eingebunden, damit du nicht bei Null starten musst. So haben wir unter anderem die Größe der Karte, abgerundeten Ecken und den leichten Schlagschatten definiert, die du an der Karte vielleicht schon bemerkt hast.
+Die `class` Attribute werden zum Stylen von den Elementen verwendet. Das Aussehen wird mit CSS Klassen wie z.B. `card` order `front` definiert. Auch wenn der CSS Reiter noch leer ist, wir haben ein wenig CSS schon vorbereitet und eingebunden, damit du nicht bei Null starten musst. So haben wir unter anderem die Größe der Karte, abgerundeten Ecken und den leichten Schlagschatten definiert, die du an der Karte vielleicht schon bemerkt hast.
 
 ### Das erste eigene HTML Element
 Lass uns nun das erste HTML Element du der Vorderseite der Karte hinzufügen, eine `h1` Überschrift:
 > HTML
 ```html
   <article class="front">
-    <canvas class='canvas'></canvas>
     <!-- Front side content -->
     <h1>Merry XMas!</h1>
   </article>
@@ -75,7 +72,7 @@ Unsere Karte wirkt noch recht leblos. Lass uns ein Hintergrundbild für die Vord
 ```css
 .front {
   align-content: center;
-  backround: url(...);
+  background: url(...);
   background-size: cover;
   background-position: center;
   border: solid white 8px;
@@ -124,3 +121,57 @@ Wenn du versuchst, etwas in das zweite `article` Element zu schreiben wirst du f
 Nun sollte die Vorderseite nicht mehr sichtbar sein und er Text "some Text for testing..." erscheinen.
 
 ### Die Rückseite gestalten
+Nun können wir die Rückseite mit Inhalt füllen. Schreib einen Text an eine besondere Person oder Bekannten, oder Grüß alle deine Freunde:
+
+> HTML
+```html
+<article class='back'>
+  <!-- Back side content -->
+  <h2 class="text-header">Moin Roly!<h2>
+  <p class="text-header">Hamburg ist einfach zauberhaft während der Weihnachtszeit. Es gibt zahllose Wintermärkte, heißen Glühwein und allerlei Leckereien. 
+  </p> 
+  <p class="text">Du musst dir umbedingt auch das Wasserschloss ansehen, wenn du mal wieder in der Stadt bist. Gerade in der Dämmerung ist es einfach magisch.</p>
+  <p class="text">Bis Bald!</p>
+  <span class="signature">Felix</span>
+</article>
+```
+
+In mehreren `h2`, `p` und `span` Elementen können wir unseren Text strukturieren. zwischen den einzelnen Elementen können wir die Abstände und Textgrößen der einzelnen Abschnitte definieren:
+
+> CSS
+```css
+.back {
+  padding: 8px;
+  background-color: crimson;
+  color: #ffefef;
+  align-content: center;
+}
+```
+
+- `padding: 8px`: Setzt einen inneren Abstand von 8px zu allen Rändern.
+- `background-color: crimson`: Verändert die Hintergrundfarbe von weiß zu einem Rotton.
+- `color: #ffefef`: Dies ist ein HexCode für eine helle Farbe. Mit diesen Codes kann man jede Farbe setzen, die man sich wünschen kann.
+
+> CSS
+```css
+.text-header {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.text {
+  margin-bottom: 12px;
+}
+
+.signature {
+  font-family: Mea Culpa;
+  font-style: italic;
+  text-align: center;
+  font-size: 24px;
+}
+```
+
+  - `margin-bottom: 24px`: Fügt einen äußeren Abstand am unteren Rand von dem Element von 24 Pixeln hinzu.
+  - `font-style: italic`:  Es wird kursive Schrift für dieses Element verwendet. 
+
+Nun haben wir sowohl die Vorder - als auch die Rückseite unserer Karte wunderschön gestaltet. Jetzt muss der Nutzer nur noch die Karte selbst drehen können.
