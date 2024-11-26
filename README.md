@@ -24,9 +24,10 @@ Du siehst vor dir das Template für die Weihnachtskarte. Es gibt drei Reiter - H
 </main>
 ```
 
-Du siehst hier die Struktur von dem Inhalt der Website. Sie wird mit sogenannten `Elementen` , die man ineinander verschachteln kann, beschrieben. Z.B. besteht die Grußkarte aus einem `main` Element, in dem sich 2 `article` Elemente befinden. Das sieht man daran, dass sich die `article` Elemente zwischen dem öffnenden `<main>` Tag und dem schließenden `</main>` Tag befinden. Alles zwischen diesen beiden Tags befindet sich "in dem `main` Element".
+Du siehst hier die Struktur von dem Inhalt der Website. Sie wird mit sogenannten `Elementen` , die man ineinander verschachteln kann, beschrieben. Z.B. besteht die Grußkarte aus einem `main` Element, in dem sich 2 `article` Elemente befinden. Das sieht man daran, dass sich die `article` Elemente zwischen dem öffnenden `<main>` Tag und dem schließenden `</main>` Tag befinden. Alles zwischen diesen beiden Tags befindet sich "in dem `main` Element". (Siehe [Anhang - HTML](#anhang))
 
-Die `class` Attribute werden zum Stylen von den Elementen verwendet. Das Aussehen wird mit CSS Klassen wie z.B. `card` order `front` definiert. Auch wenn der CSS Reiter noch leer ist, wir haben ein wenig CSS schon vorbereitet und eingebunden, damit du nicht bei Null starten musst. So haben wir unter anderem die Größe der Karte, abgerundeten Ecken und den leichten Schlagschatten definiert, die du an der Karte vielleicht schon bemerkt hast.
+Die `class` Attribute werden zum Stylen von den Elementen verwendet. Das Aussehen wird mit CSS Klassen wie z.B. `card` order `front` definiert. (Siehe [Anhang - CSS](#anhang))
+Wir haben ein wenig CSS schon vorbereitet und eingebunden, damit du nicht bei Null starten musst. So haben wir unter anderem die Größe der Karte, abgerundeten Ecken und den leichten Schlagschatten definiert, die du an der Karte vielleicht schon bemerkt hast.
 
 ### Das erste eigene HTML Element
 
@@ -215,7 +216,7 @@ Zuerst nehmen wir die Klasse `flipped` von unserer Karte, damit wir wieder die V
 <main class="card">...</main>
 ```
 
-Damit der Nutzer den Inhalt einer Website verändern kann, brauchen wir JavaScript. Das Ziel ist, dass die Karte gewendet wird, wenn der Nutzer auf diese klickt. In dem JS Reiter befindet sich schon folgender code:
+Damit der Nutzer den Inhalt einer Website verändern kann, brauchen wir JavaScript. (Siehe [Anhang - JS](#anhang)) Das Ziel ist, dass die Karte gewendet wird, wenn der Nutzer auf diese klickt. In dem JS Reiter befindet sich schon folgender code:
 
 > JS
 
@@ -263,7 +264,7 @@ function handleCardClick() {
 
 - `classList.toggle`: Anstatt die Klasse hinzuzufügen, "togglen" oder schalten wir die Klasse um. Wenn sie vorhanden ist, wird sie entfernt; wenn sie fehlt, wird sie hinzugefügt.
 
-Et Voila! Unsere Karte lässt sich nun nach belieben wenden.
+Et Voila! Unsere Karte lässt sich nun nach Belieben wenden.
 
 ### Ein wenig weihnachtlicher Zauber
 
@@ -282,3 +283,257 @@ Ihr könnt unterschiedlice Zahlen und Farben anstelle von `30` und `"white"` wä
 Wir hoffen euch hat unser kleiner Workshop gefallen und dass ihr Lust auf Mehr bekommen habt! In unseren [Bootcamps](https://www.neuefische.de/) könnt ihr tief in das Thema Entwicklung eintauchen und eure Karriere als Web Entwickler\*in starten.
 
 Wir wünschen weiterhin eine Gute Zeit und natürlich ein Frohes Fest! ❄️🎁
+
+---
+
+## Anhang
+
+<details>
+
+  <summary>Was ist HTML</summary>
+
+---
+
+**HTML** (HyperText Markup Language) ist die Grundstruktur jeder Webseite. Es ist eine Sprache, die verwendet wird, um Inhalte wie Texte, Bilder, Links oder Videos auf einer Webseite anzuordnen und zu strukturieren. HTML beschreibt dabei, **was die Inhalte sind**, aber nicht, wie sie aussehen (das übernimmt CSS).
+
+### Wichtige Konzepte
+
+1. **Elemente**: Bestehen aus einem **Tag** (z. B. `<p>`), dem **Inhalt** und einem **schließenden Tag** (z. B. `</p>`).  
+   Beispiel:
+
+   ```html
+   <p>Das ist ein Absatz.</p>
+   ```
+
+2. **Attribute**: Zusätzliche Informationen für ein Element.  
+   Beispiel:
+
+   ```html
+   <img src="bild.jpg" alt="Beispielbild" />
+   ```
+
+3. **Verschachtelung**: Elemente können innerhalb anderer Elemente liegen.  
+   Beispiel:
+   ```html
+   <div>
+     <h1>Überschrift</h1>
+     <p>Das ist ein Text.</p>
+   </div>
+   ```
+
+### Einfache Beispiele der wichtigsten Tags
+
+#### 1. **Grundlegende Struktur einer HTML-Seite**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meine Webseite</title>
+  </head>
+  <body>
+    <h1>Willkommen!</h1>
+    <p>Das ist meine erste Webseite.</p>
+  </body>
+</html>
+```
+
+#### 2. **Überschriften**
+
+Für Überschriften gibt es die Tags `<h1>` bis `<h6>`, wobei `<h1>` die wichtigste ist:
+
+```html
+<h1>Große Überschrift</h1>
+<h3>Kleinere Überschrift</h3>
+```
+
+#### 3. **Absätze**
+
+Für normalen Text nutzt du `<p>`:
+
+```html
+<p>Das ist ein Absatz.</p>
+```
+
+#### 4. **Links**
+
+Links werden mit dem `<a>`-Tag erstellt:
+
+```html
+<a href="https://example.com">Besuche diese Seite!</a>
+```
+
+#### 5. **Bilder**
+
+Mit `<img>` kannst du Bilder einfügen:
+
+```html
+<img src="bild.jpg" alt="Beschreibung des Bildes" />
+```
+
+#### 6. **Listen**
+
+- **Geordnete Liste** (nummeriert):
+  ```html
+  <ol>
+    <li>Erstes Element</li>
+    <li>Zweites Element</li>
+  </ol>
+  ```
+- **Ungeordnete Liste** (Punkte):
+  ```html
+  <ul>
+    <li>Element eins</li>
+    <li>Element zwei</li>
+  </ul>
+  ```
+
+### Wichtig: HTML allein macht die Webseite nicht schön!
+
+- **HTML** ist für den Inhalt zuständig.
+- **CSS** gestaltet das Aussehen.
+- **JavaScript** bringt Dynamik und Funktionalität.
+
+Mit diesen Grundbausteinen kannst du eine einfache Webseite erstellen! 😊
+
+💡 [More about HTML on mdn](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+</details>
+
+<details>
+
+  <summary>Was ist CSS</summary>
+
+---
+
+**CSS** (Cascading Style Sheets) ist eine Sprache, die verwendet wird, um das Aussehen und die Gestaltung von Webseiten zu definieren. Mit CSS kannst du z. B. Schriftarten, Farben, Abstände, Größen und vieles mehr ändern. Während HTML für den Aufbau der Inhalte einer Webseite zuständig ist, sorgt CSS dafür, dass diese Inhalte schön und ansprechend aussehen.
+
+### Wichtige Konzepte
+
+1. **Selektoren**: Damit wählst du aus, welche HTML-Elemente gestaltet werden sollen.
+2. **Eigenschaften und Werte**: Mit Eigenschaften wie `color` oder `font-size` legst du fest, wie die Elemente aussehen sollen.
+3. **Regeln**: Eine Regel besteht aus einem Selektor, einer Eigenschaft und einem Wert.
+
+### Einfache Beispiele der wichtigsten Selektoren
+
+#### 1. **Element-Selektor**
+
+Hier wird ein bestimmtes HTML-Element ausgewählt.
+
+```css
+p {
+  color: blue; /* Ändert die Textfarbe aller <p>-Elemente auf Blau */
+}
+```
+
+#### 2. **Klassen-Selektor**
+
+Für mehrere Elemente mit der gleichen Klasse.
+
+```css
+.card {
+  border: 1px solid black; /* Fügt allen Elementen mit der Klasse "card" einen schwarzen Rahmen hinzu */
+}
+```
+
+#### 3. **ID-Selektor**
+
+Für ein einzelnes Element mit einer eindeutigen ID.
+
+```css
+#header {
+  background-color: lightgray; /* Ändert den Hintergrund eines Elements mit der ID "header" */
+}
+```
+
+#### 4. **Universal-Selektor**
+
+Wählt alle Elemente aus.
+
+```css
+* {
+  margin: 0; /* Setzt alle Ränder auf 0 */
+}
+```
+
+#### 5. **Kombinatoren**
+
+Für komplexere Auswahlmöglichkeiten:
+
+```css
+div p {
+  font-size: 14px; /* Ändert die Schriftgröße von <p>, das in einem <div> liegt */
+}
+```
+
+### So fügst du CSS hinzu
+
+1. **Inline** (direkt im HTML-Element):
+
+   ```html
+   <p style="color: red;">Text in Rot</p>
+   ```
+
+2. **Im `<style>`-Tag im HTML**:
+
+   ```html
+   <style>
+     h1 {
+       font-family: Arial;
+     }
+   </style>
+   ```
+
+3. **In einer externen Datei**:  
+   Eine `.css`-Datei, die verlinkt wird:
+   ```html
+   <link rel="stylesheet" href="styles.css" />
+   ```
+
+Mit diesen Grundlagen kannst du das Design deiner Webseite Schritt für Schritt verbessern! 😊
+
+💡 [More about CSS on mdn](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+</details>
+
+<details>
+
+  <summary>Was ist JavaScript</summary>
+
+---
+
+**JavaScript** ist eine Programmiersprache, die Webseiten interaktiv und dynamisch macht. Während **HTML** die Struktur vorgibt und **CSS** das Design gestaltet, sorgt **JavaScript** dafür, dass sich die Webseite **"bewegt"** und auf Benutzeraktionen reagiert.
+
+### Wofür wird JavaScript verwendet?
+
+1. **Interaktivität**  
+   JavaScript ermöglicht Funktionen wie das Anzeigen von Pop-ups, das Einblenden oder Ausblenden von Inhalten oder das Prüfen von Formularen.  
+   Beispiel:
+
+   - Ein Button, der bei einem Klick eine Nachricht zeigt.
+
+2. **Animationen**  
+   Dinge wie Bildergalerien oder animierte Menüs werden oft mit JavaScript erstellt.
+
+3. **Datenverarbeitung**  
+   JavaScript kann Daten laden, speichern und bearbeiten, z. B. von einem Server oder aus einem Formular.
+
+### Ein einfaches Beispiel
+
+Ein Button, der eine Nachricht zeigt, wenn man darauf klickt:
+
+```html
+<button onclick="alert('Hallo!')">Klick mich!</button>
+```
+
+### Zusammenarbeit von HTML, CSS und JavaScript
+
+- **HTML**: Der Button wird erstellt.
+- **CSS**: Der Button wird farbig und schön gemacht.
+- **JavaScript**: Der Button reagiert auf einen Klick.
+
+JavaScript macht deine Webseite lebendig! 😊
+
+💡 [More about JavaScript on mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+</details>
