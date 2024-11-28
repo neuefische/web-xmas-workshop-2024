@@ -156,11 +156,11 @@ Nun können wir die Rückseite mit Inhalt füllen. Schreib einen Text an eine be
 <article class='back'>
   <!-- Back side content -->
   <h2 class="text-header">Moin Roly!<h2>
-  <p class="text-header">Hamburg ist einfach zauberhaft während der Weihnachtszeit. Es gibt zahllose Wintermärkte, heißen Glühwein und allerlei Leckereien.
+  <p class="text">Hamburg ist einfach zauberhaft während der Weihnachtszeit. Es gibt zahllose Wintermärkte, heißen Glühwein und allerlei Leckereien.
   </p>
   <p class="text">Du musst dir umbedingt auch das Wasserschloss ansehen, wenn du mal wieder in der Stadt bist. Gerade in der Dämmerung ist es einfach magisch.</p>
   <p class="text">Bis Bald!</p>
-  <span class="signature">Felix</span>
+  <p class="signature">Felix</p>
 </article>
 ```
 
@@ -268,19 +268,19 @@ Et Voila! Unsere Karte lässt sich nun nach Belieben wenden.
 
 ### Ein wenig weihnachtlicher Zauber
 
-Zu guter letzt haben wir eine kleines Geschenk für euch vorbereitet, welches eurer Weihnachtskarte einen Hauch Weihnachtszauber verleiht. Fügt folgende Zeile dem CSS Hinzu:
+Zu guter Letzt haben wir eine kleines Geschenk für euch vorbereitet, welches eurer Weihnachtskarte einen Hauch Weihnachtszauber verleiht. Fügt folgende Zeile dem JS hinzu:
 
 > JS
 
 ```js
-addChristmasMagic(30, "white");
+addChristmasMagic(30, "peachpuff");
 ```
 
-Ihr könnt unterschiedlice Zahlen und Farben anstelle von `30` und `"white"` wählen und sehen was passiert. ✨
+Ihr könnt unterschiedlice Zahlen und Farben anstelle von `30` und `"peachpuff"` wählen und sehen was passiert. ✨
 
 ### Abschluss
 
-Wir hoffen euch hat unser kleiner Workshop gefallen und dass ihr Lust auf Mehr bekommen habt! In unseren [Bootcamps](https://www.neuefische.de/) könnt ihr tief in das Thema Entwicklung eintauchen und eure Karriere als Web Entwickler\*in starten.
+Wir hoffen euch hat unser kleiner Workshop gefallen und dass ihr Lust auf Mehr bekommen habt! In unseren [Bootcamps](https://www.neuefische.de/) könnt ihr noch tiefer in in diese Themen eintauchen und eure Karriere als Web Entwickler\*in starten.
 
 Wir wünschen weiterhin eine Gute Zeit und natürlich ein Frohes Fest! ❄️🎁
 
