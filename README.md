@@ -276,7 +276,7 @@ Zu guter Letzt haben wir eine kleines Geschenk für euch vorbereitet, welches eu
 addChristmasMagic(30, "peachpuff");
 ```
 
-Ihr könnt unterschiedlice Zahlen und Farben anstelle von `30` und `"peachpuff"` wählen und sehen was passiert. ✨
+Ihr könnt unterschiedliche Zahlen und Farben anstelle von `30` und `"peachpuff"` wählen und sehen was passiert. ✨
 
 ### Abschluss
 
