@@ -1,3 +1,5 @@
+<img src='./assets/title-image.jpg' style='border-radius: 16px;' />
+
 # XMas Workshop - How to build a Greeting Card
 
 In diesem Workshop werden wir gemeinsam eine interaktive Grußkarte für die Weihnachtszeit bauen. Du kannst sie später an Freunde und Verwandte senden und zeigen was du alles gelernt hast. ✨
